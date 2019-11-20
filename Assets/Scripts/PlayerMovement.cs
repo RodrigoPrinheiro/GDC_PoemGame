@@ -44,6 +44,13 @@ public class PlayerMovement : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
     }
 
+    public void ResetSpeed(Vector3 position)
+    {
+        characterController.enabled = false;
+        transform.position = position;
+        characterController.enabled = true;
+    }
+
     private void GetInputs()
     {
         _direction = Input.GetAxisRaw("Horizontal");
