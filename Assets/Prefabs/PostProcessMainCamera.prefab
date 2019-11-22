@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8449307140222412098}
   - component: {fileID: 8821828376762985549}
   - component: {fileID: 8449307140222412096}
+  - component: {fileID: 2691811554334602503}
   m_Layer: 8
   m_Name: PostProcessMainCamera
   m_TagString: MainCamera
@@ -186,3 +187,15 @@ MonoBehaviour:
   cameraClearFlags: 2
   background: {r: 0, g: 0, b: 0, a: 1}
   targetTexture: _CameraNormalsTexture
+--- !u!114 &2691811554334602503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8449307140222412124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1c310985ca04840a2cd2019a13453e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
