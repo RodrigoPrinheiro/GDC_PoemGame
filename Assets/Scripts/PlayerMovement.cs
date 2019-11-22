@@ -2,7 +2,7 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    CharacterController characterController;
+    private CharacterController characterController;
 
     public float speed = 6.0f;
     public float jumpSpeed = 8.0f;
@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _jumping;
 
     private Vector3 moveDirection = Vector3.zero;
+    private bool canMoveVertical;
 
     void Start()
     {
@@ -19,7 +20,12 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        ComputeVelocity();
+        if (canMoveVertical)
+        {
+            ComputeVelocityVertical();
+        }
+        else
+            ComputeVelocity();
 
         characterController.Move(moveDirection * Time.deltaTime);
     }
@@ -42,6 +48,26 @@ public class PlayerMovement : MonoBehaviour
         }
 
         moveDirection.y -= gravity * Time.deltaTime;
+    }
+    private void ComputeVelocityVertical()
+    {
+        if (characterController.isGrounded)
+        {
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+            moveDirection *= speed;
+
+            if (_jumping)
+            {
+                moveDirection.y = jumpSpeed;
+            }
+        }
+
+        moveDirection.y -= gravity * Time.deltaTime;
+    }
+
+    public void SetVerticalMove()
+    {
+        canMoveVertical = true;
     }
 
     public void ResetSpeed(Vector3 position)
