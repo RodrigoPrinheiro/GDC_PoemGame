@@ -23,7 +23,11 @@ public class SoundTriggerSuper : SoundTrigger
 
     protected override void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "Player")
+        {
+            sound.Play();
+        }
+
         soundStartEvent?.Invoke();
-        base.OnTriggerEnter(other);
     }
 }
