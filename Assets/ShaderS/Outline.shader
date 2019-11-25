@@ -1,4 +1,4 @@
-﻿Shader "Hidden/PineTree/Outline Post Process"
+﻿Shader "Hidden/PineTree/Outline"
 {
     SubShader
     {
@@ -6,7 +6,7 @@
 
         Pass
         {
-            HLSLPROGRAM
+			HLSLPROGRAM
             #pragma vertex Vert
             #pragma fragment Frag
 			#include "Packages/com.unity.postprocessing/PostProcessing/Shaders/StdLib.hlsl"
@@ -111,7 +111,7 @@
 
 				return alphaBlend(edgeColor, color);
 			}
-            ENDHLSL
+			ENDHLSL
         }
     }
 }

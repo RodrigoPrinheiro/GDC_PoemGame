@@ -4,7 +4,7 @@ using UnityEngine;
 
 // Script has the base from https://github.com/Unity-Technologies/PostProcessing/wiki/Writing-Custom-Effects
 [Serializable]
-[PostProcess(typeof(PostProcessColorScaleRenderer), PostProcessEvent.BeforeStack, "PineTree/Color Scale")]
+[PostProcess(typeof(PostProcessColorScaleRenderer), PostProcessEvent.AfterStack, "PineTree/Color Scale")]
 public sealed class ColorScale : PostProcessEffectSettings
 {
     // Insert post process settings here

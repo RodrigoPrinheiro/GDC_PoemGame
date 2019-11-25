@@ -4,7 +4,7 @@ using UnityEngine.Rendering.PostProcessing;
 
 // Script has the base from https://github.com/Unity-Technologies/PostProcessing/wiki/Writing-Custom-Effects
 [Serializable]
-[PostProcess(typeof(PostProcessOutlineRenderer), PostProcessEvent.BeforeStack, "PineTree/Post Process Outline")]
+[PostProcess(typeof(PostProcessOutlineRenderer), PostProcessEvent.AfterStack, "Hidden/PineTree/Outline")]
 public sealed class PostProcessOutline : PostProcessEffectSettings
 {
     [Tooltip("Number of pixels between samples that are tested for an edge. When this value is 1, tested samples are adjacent.")]
@@ -26,7 +26,8 @@ public sealed class PostProcessOutlineRenderer : PostProcessEffectRenderer<PostP
 {
     public override void Render(PostProcessRenderContext context)
     {
-        var sheet = context.propertySheets.Get(Shader.Find("Hidden/PineTree/Outline Post Process"));
+        var sheet = context.propertySheets.Get(Shader.Find("Hidden/PineTree/Outline"));
+
         sheet.properties.SetFloat("_Scale", settings.scale);
         sheet.properties.SetColor("_Color", settings.color);
         sheet.properties.SetFloat("_DepthThreshold", settings.depthThreshold);

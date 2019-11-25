@@ -269,12 +269,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &778970091 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3393405119381286697, guid: 5c5249bbbfee4f745b0e295f912ca568,
-    type: 3}
-  m_PrefabInstance: {fileID: 3393405119685496002}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1416958544
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349a398af69390c46b5e6954a62600a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuCanvas: {fileID: 778970091}
 --- !u!4 &1502469930
 Transform:
   m_ObjectHideFlags: 0
@@ -417,6 +410,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5642856586420293836, guid: 5c5249bbbfee4f745b0e295f912ca568,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1502469929}
+    - target: {fileID: 5642856586420293836, guid: 5c5249bbbfee4f745b0e295f912ca568,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
     - target: {fileID: 3393405119381286697, guid: 5c5249bbbfee4f745b0e295f912ca568,
         type: 3}
       propertyPath: m_Name
@@ -537,5 +540,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1502469929}
+    - target: {fileID: 3393405119241826401, guid: 5c5249bbbfee4f745b0e295f912ca568,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.00126791
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393405119241826401, guid: 5c5249bbbfee4f745b0e295f912ca568,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393405119241826401, guid: 5c5249bbbfee4f745b0e295f912ca568,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.11645913
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393405119241826401, guid: 5c5249bbbfee4f745b0e295f912ca568,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c5249bbbfee4f745b0e295f912ca568, type: 3}
